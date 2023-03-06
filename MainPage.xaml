@@ -9,14 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="Button2" Content="Button" Margin="494,381,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name="Button1" Content="Button" Margin="494,307,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name="Button3" Content="Button" Margin="494,450,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <Button x:Name="Button4" Content="Button" Margin="494,520,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
-        <TextBox HorizontalAlignment="Left" Margin="376,426,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="618,427,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,433,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="836,427,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <Button x:Name="Button2" Content="-" Margin="494,350,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button2_Click"/>
+        <Button x:Name="Button1" Content="+" Margin="494,295,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button1_Click"/>
+        <Button x:Name="Button3" Content="*" Margin="494,405,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button3_Click"/>
+        <Button x:Name="Button4" Content="/" Margin="494,460,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="Button4_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="323,383,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="45" Width="115" TextChanged="textBox1_TextChanged" TextAlignment="Center"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="594,383,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="45" Width="115" TextChanged="textBox2_TextChanged" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockAns" HorizontalAlignment="Left" Margin="855,396,0,0" TextWrapping="Wrap" Text="Ans" VerticalAlignment="Top" Height="45" Width="115" SelectionChanged="TextBlock_SelectionChanged" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="731,396,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Height="25" Width="90" TextAlignment="Center"/>
+        <RadioButton x:Name="radioButton1" Content="Decimal" Margin="1053,304,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked" IsChecked="true"/>
+        <RadioButton x:Name="radioButton2" Content="Binary" Margin="1053,359,0,0" VerticalAlignment="Top" Checked="radioButton2_Checked"/>
+        <RadioButton x:Name="radioButton3" Content="Hexadecimal" Margin="1053,414,0,0" VerticalAlignment="Top" Checked="radioButton3_Checked"/>
+        <RadioButton x:Name="radioButton4" Content="Octal" Margin="1053,464,0,0" VerticalAlignment="Top" Checked="radioButton4_Checked"/>
 
     </Grid>
 </Page>

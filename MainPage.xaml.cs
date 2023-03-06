@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -23,29 +24,101 @@ namespace MyFirstGUIApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        int count = 0;
         public MainPage()
         {
             this.InitializeComponent();
         }
-        
-        private void Button_Click(object sender, RoutedEventArgs e)
+        int result=0, first=0, second=0;
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(count==0)
-            {
-                Blok.Text = "biće";
-                count = 1;
-            }
+
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            //addition
+            first = Int32.Parse(textBox1.Text);
+            second = Int32.Parse(textBox2.Text);
+            result = first + second;
+            textBlockAns.Text=result.ToString();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            //subtraction
+            first = Int32.Parse(textBox1.Text);
+            second = Int32.Parse(textBox2.Text);
+            result = first - second;
+            textBlockAns.Text = result.ToString();
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            //multiplication
+            first = Int32.Parse(textBox1.Text);
+            second = Int32.Parse(textBox2.Text);
+            result = first * second;
+            textBlockAns.Text = result.ToString();
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            //division
+            first = Int32.Parse(textBox1.Text);
+            second = Int32.Parse(textBox2.Text);
+            if (second == 0)
+                textBlockAns.Text = "∞";
             else
             {
-                Blok.Text = "nebiće";
-                count = 0;
+                result = first / second;
+                textBlockAns.Text = result.ToString();
+            }
+        }
+        private void radioButton1_Checked(object sender, RoutedEventArgs e)
+        {
+            //decimal
+            if(radioButton1.IsChecked==true)
+            {
+                textBlockAns.Text = Convert.ToString(result, 10);
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void radioButton2_Checked(object sender, RoutedEventArgs e)
         {
+            //binary
+            if (radioButton2.IsChecked == true)
+            {
+                textBlockAns.Text = Convert.ToString(result, 2);
+            }
+        }
 
+        private void radioButton3_Checked(object sender, RoutedEventArgs e)
+        {
+            //hexadecimal
+            if (radioButton3.IsChecked == true)
+            {
+                textBlockAns.Text = Convert.ToString(result, 16);
+            }
+        }
+
+        private void radioButton4_Checked(object sender, RoutedEventArgs e)
+        {
+            //octal
+            if (radioButton4.IsChecked == true)
+            {
+                textBlockAns.Text = Convert.ToString(result, 8);
+            }
         }
     }
 }
