@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="MyFirstGUIApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyFirstGUIApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button x:Name="Button2" Content="Button" Margin="494,381,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="Button1" Content="Button" Margin="494,307,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="Button3" Content="Button" Margin="494,450,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <Button x:Name="Button4" Content="Button" Margin="494,520,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
+        <TextBox HorizontalAlignment="Left" Margin="376,426,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="618,427,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,433,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="836,427,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
